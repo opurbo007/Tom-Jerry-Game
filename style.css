@@ -1,0 +1,92 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style: none;
+   text-decoration: none;
+}
+body {
+   overflow: hidden;
+}
+.gameContainer {
+   background: url(./bg.png) no-repeat;
+   background-size: 100vw 100vh;
+   height: 100vh;
+}
+.jerry {
+   background: url(./jerry.png) no-repeat;
+   background-size: cover;
+   height: 170px;
+   width: 170px;
+   position: absolute;
+   bottom: 21%;
+   left: 10%;
+}
+.tom {
+   background: url(./tom.png) no-repeat;
+   background-size: cover;
+   height: 270px;
+   width: 420px;
+   position: absolute;
+   bottom: 21%;
+   right: 10%;
+   border: 1px soild red;
+}
+.jerryJump {
+   animation: jump 0.75s linear;
+}
+.tomRun {
+   animation: run 1.5s linear infinite;
+}
+@keyframes jump {
+   0% {
+      bottom: 21%;
+   }
+   25% {
+      bottom: 50%;
+   }
+   50% {
+      bottom: 70%;
+   }
+   75% {
+      bottom: 50%;
+   }
+   100% {
+      bottom: 21%;
+   }
+}
+
+@keyframes run {
+   0% {
+      left: 100vw;
+   }
+   100% {
+      bottom: 21%;
+      left: -10vw;
+   }
+}
+.gameOver {
+   position: absolute;
+   font-size: 80px;
+   font-weight: bolder;
+   visibility: hidden;
+   top: 40%;
+   left: 42%;
+   border: solid 10px rgb(16, 128, 16);
+   padding: 10px;
+   border-radius: 10px;
+   color: rgb(0, 0, 0);
+   background: rgb(207, 207, 207);
+}
+#scoreCon {
+   position: absolute;
+   font-size: 50px;
+   font-weight: bolder;
+   top: 2%;
+   right: 2%;
+   border: solid 10px rgb(16, 128, 16);
+   padding: 5px;
+   border-radius: 10px;
+   color: rgb(0, 0, 0);
+   background: rgb(236, 234, 234);
+}
